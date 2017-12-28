@@ -33,12 +33,20 @@ public class UnionTest {
 	}
 	
 	@Test (expected = NullPointerException.class)
-	   public void testForNullElement()
-	   {
-	      a = null;
-	      b.add("perro");
-	      Union.union(a, b);
-	   }
+	public void testForNullVector()
+	{
+		a = null;
+	    b.add("perro");
+	    Union.union(a, b);
+	}
+	
+	@Test (expected = NullPointerException.class)
+	public void testForBothNullVector()
+	{
+		b = null;
+		a = null;
+	    Union.union(a, b);
+	}
 	
 	@Test
 	public void testDifferentVectors()
