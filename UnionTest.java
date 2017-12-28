@@ -66,4 +66,27 @@ public class UnionTest {
 		
 	}
 	
+	@Test
+	public void testNotCopyRepeatElement()
+	{
+		c = new Vector();
+		a.add(1);
+		a.add("gato");
+		a.add(2);
+		a.add(2);
+		a.add(3);
+		
+		b.add("perro");
+		b.add("gato");
+		b.add(1);
+		b.add(1);
+		
+		c.add(1);
+		c.add("gato");
+		c.add(2);
+		c.add(3);
+		c.add("perro");
+		assertTrue("Mismos elementos", c.equals(Union.union(a, b)));
+	}
+	
 }
