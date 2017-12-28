@@ -20,7 +20,16 @@ public class Union {
 		if(a == null || b == null ){
 			 throw new NullPointerException("Alguno de los vectores esta vacio");
 		}
-		
+		for (Object valor : a){
+			if(!v_resultado.contains(valor)){
+				v_resultado.add(valor);
+			}
+		}
+		for (Object valor : b){
+			if(!v_resultado.contains(valor)){
+				v_resultado.add(valor);
+			}
+		}
 		return v_resultado;
 		
 	}
