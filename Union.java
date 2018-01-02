@@ -1,5 +1,7 @@
 package urjc.isi.ejercicio1Junit;
 
+import java.util.HashSet;
+import java.util.Set;
 import java.util.Vector;
 
 public class Union {
@@ -32,5 +34,36 @@ public class Union {
 		}
 		return v_resultado;
 		
+	}
+	
+	public static Set unionSet(Set a, Set b){
+		
+		Set s_resultado = new HashSet<>();
+		
+		
+		if(a == null || b == null ){
+			 throw new NullPointerException("Alguno de los vectores esta vacio");
+		}
+		for (Object valor : a){
+			s_resultado.add(valor);
+		}
+		for (Object valor : b){
+			s_resultado.add(valor);
+		}
+		return s_resultado;
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Set<Integer> resultado = new HashSet<>();
+		resultado.add(1);
+		resultado.add(1);
+		resultado.add(2);
+		resultado.add(3);
+		for (Object valor : resultado){
+			System.out.println(valor);
+		}
+		
+
 	}
 }
