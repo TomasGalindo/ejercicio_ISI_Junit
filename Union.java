@@ -53,17 +53,4 @@ public class Union {
 		return s_resultado;
 	}
 	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Set<Integer> resultado = new HashSet<>();
-		resultado.add(1);
-		resultado.add(1);
-		resultado.add(2);
-		resultado.add(3);
-		for (Object valor : resultado){
-			System.out.println(valor);
-		}
-		
-
-	}
 }
